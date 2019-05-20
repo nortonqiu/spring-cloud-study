@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: study
+  cloud:
+    config:
+      label: dev
+      profile: dev
+      uri: http://localhost:8010/
+      discovery:
+        enabled: true
+        service-id: study-config-server
+
+server:
+  port: 8020
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

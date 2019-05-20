@@ -1,0 +1,17 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: study-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/nortonqiu/microservices-confg-study.git
+#          search-paths: myconfigpath
+#      label: dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
